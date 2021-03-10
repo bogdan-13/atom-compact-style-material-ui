@@ -1,60 +1,64 @@
-
 // bogdan13 UI settings for material-ui Theme
-@my-ui-font-size: .7rem; //for default material-ui font-size 16px
-@max-compact-tab-bar: 1.6rem;
+@my-ui-font-size: 0.8rem; //for default material-ui font-size 16px
+@max-compact-tab-bar: 1.7rem;
 
-//compact tree view
+//compact tree-view
 .tree-view {
   font-size: @my-ui-font-size;
 
   .file.entry::before {
-      padding-left: 1em;
+    padding-left: 1em;
   }
 
   .icon::before {
-    margin-right: .5em;
+    margin-right: 0.5em;
   }
 
   .list-tree.has-collapsable-children .list-nested-item > .list-item::before {
-    margin-right: .5em;
+    margin-right: 0.5em;
   }
 
   .list-tree.has-collapsable-children li.list-item {
     margin-left: 1.5em;
   }
 
-  .list-tree.has-collapsable-children .list-nested-item > .list-tree > li, .list-tree.has-collapsable-children .list-nested-item > .list-group > li {
-    padding-left:1.5em;
+  .list-tree.has-collapsable-children .list-nested-item > .list-tree > li,
+  .list-tree.has-collapsable-children .list-nested-item > .list-group > li {
+    padding-left: 1.5em;
   }
 
-  .list-group li:not(.list-nested-item), .list-tree li:not(.list-nested-item), .list-group li.list-nested-item > .list-item, .list-tree li.list-nested-item > .list-item {
+  .list-group li.list-nested-item > .list-item,
+  .list-tree li.list-nested-item > .list-item {
     line-height: 2em;
   }
 
-  .list-group .selected:before, .list-tree .selected:before {
-    height:2em;
+  .list-group .selected::before,
+  .list-tree .selected::before {
+    height: 2em;
   }
 
   li.directory.entry.list-nested-item.collapsed.selected::before {
-    border-left: 1px solid white;
-  }
-  li.directory.entry.list-nested-item.expanded.selected::before {
-    border-left: 1px solid white;
+    border-left: 1px solid teal;
   }
 
+  li.directory.entry.list-nested-item.expanded.selected::before {
+    border-left: 1px solid teal;
+  }
 }
 
 // compact tab bar
 .tab-bar {
   font-size: @my-ui-font-size;
+  font-family: sans-serif;
 }
 
 .amu-compact-tab-bar .tab-bar {
   height: @max-compact-tab-bar;
-  max-height: @max-compact-tab-bar;
+
   .tab {
     height: @max-compact-tab-bar;
     line-height: @max-compact-tab-bar;
+
     .close-icon {
       line-height: @max-compact-tab-bar;
     }
